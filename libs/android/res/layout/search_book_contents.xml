@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/sbc_layout_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <EditText android:layout_gravity="left|center" android:id="@id/query_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:selectAllOnFocus="true" android:layout_weight="1.0" />
+        <Button android:id="@id/query_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_search_book_contents" android:layout_weight="0.0" />
+    </LinearLayout>
+    <ListView android:id="@id/result_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</LinearLayout>

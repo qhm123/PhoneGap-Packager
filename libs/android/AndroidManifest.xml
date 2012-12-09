@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="{{versioncode}}" android:versionName="{{versionname}}" package="{{packagename}}"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+
+    {{permissions}}
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:label="@string/app_name" android:name="com.sinaapp.build.MyApp" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.sina.cwd.DroidGapWrapper" android:targetActivity="com.sinaapp.build.MyApp" />
+        <activity android:label="@string/app_name" android:name="org.apache.cordova.DroidGap" android:configChanges="keyboardHidden|orientation">
+            <intent-filter />
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="com.phonegap.plugins.barcodescanner.SCAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+            android:label="Encode" >
+            <intent-filter>
+                <action android:name="com.phonegap.plugins.barcodescanner.ENCODE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.sina.cwd.WebviewServiceWrapper" />
+        <receiver android:name="org.apache.cordova.sina.alarm.AlarmReciver" />
+        <receiver android:label="@string/app_name" android:name="org.apache.cordova.sina.alarm.LockScreenAdmin" android:permission="android.permission.BIND_DEVICE_ADMIN" android:description="@string/app_name">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/lock_screen_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

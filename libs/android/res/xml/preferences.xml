@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preferences_scanning_title">
+        <CheckBoxPreference android:title="@string/preferences_decode_1D_title" android:key="preferences_decode_1D" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preferences_decode_QR_title" android:key="preferences_decode_QR" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preferences_decode_Data_Matrix_title" android:key="preferences_decode_Data_Matrix" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preferences_actions_title">
+        <CheckBoxPreference android:title="@string/preferences_play_beep_title" android:key="preferences_play_beep" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preferences_vibrate_title" android:key="preferences_vibrate" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preferences_copy_to_clipboard_title" android:key="preferences_copy_to_clipboard" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preferences_remember_duplicates_title" android:key="preferences_remember_duplicates" android:summary="@string/preferences_remember_duplicates_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preferences_supplemental_title" android:key="preferences_supplemental" android:summary="@string/preferences_supplemental_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preferences_result_title">
+        <EditTextPreference android:title="@string/preferences_custom_product_search_title" android:key="preferences_custom_product_search" android:summary="@string/preferences_custom_product_search_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preferences_general_title">
+        <CheckBoxPreference android:title="@string/preferences_front_light_title" android:key="preferences_front_light" android:summary="@string/preferences_front_light_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preferences_bulk_mode_title" android:key="preferences_bulk_mode" android:summary="@string/preferences_bulk_mode_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preferences_reverse_image_title" android:key="preferences_reverse_image" android:summary="@string/preferences_reverse_image_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

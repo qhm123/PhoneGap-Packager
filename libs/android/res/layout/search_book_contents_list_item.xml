@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.zxing.client.android.book.SearchBookContentsListItem android:orientation="horizontal" android:background="@color/sbc_list_item" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/sbc_page_number_text" android:layout_gravity="top|left|center" android:id="@id/page_number_view" android:layout_width="75.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="false" />
+    <TextView android:textSize="14.0sp" android:typeface="serif" android:textColor="@color/sbc_snippet_text" android:layout_gravity="top|left|center" android:id="@id/snippet_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" />
+</com.google.zxing.client.android.book.SearchBookContentsListItem>
