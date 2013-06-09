@@ -8,9 +8,13 @@ PhoneGap打包器，支持Android，iOS*平台，采用非编译打包方式，�
 
 # 环境
 
-需要linux，java，php环境支持。
+需要linux，java(jdk)，php环境支持。
 
-libs/tools/aapt放到/usr/bin/中
+libs/tools/aapt文件，拷贝到/usr/bin/目录里
+
+如果为ubuntu64位系统，需要安装ia32-libs
+
+sudo apt-get install ia32-libs
 
 # 使用
 
